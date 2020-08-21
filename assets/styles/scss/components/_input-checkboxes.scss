@@ -1,0 +1,60 @@
+/************** Input checkboxes **************/
+
+.input-checkboxes {
+  display: flex;
+  flex-direction: column;
+  color: #0c609a;
+}
+@media (min-width: 1300px) {
+  .input-checkboxes {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.input-checkbox__block {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media (min-width: 1300px) {
+  .input-checkbox__block {
+    width: 48%;
+    margin-bottom: 1.8rem;
+  }
+}
+
+.input-checkbox__item {
+  display: none;
+}
+
+.error--checkbox:after {
+  box-shadow: inset 0 0 0 5px #f3403d;
+  pointer-events: none;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.input-checkbox__label {
+  color: #0c609a;
+  padding: 0 2rem 0 0;
+  font-size: 1.8rem;
+  color: $color-white;
+  text-shadow: 1px 1px 1px #555;
+  cursor: pointer;
+}
+@media (min-width: 1300px) {
+  .input-checkbox__label {
+    font-size: 2rem;
+    text-shadow: none;
+  }
+}

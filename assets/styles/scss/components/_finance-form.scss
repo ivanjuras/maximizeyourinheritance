@@ -1,0 +1,104 @@
+/************* Finance form **************/
+
+.finance-form-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.2rem;
+}
+@media (min-width: 1300px) {
+  .finance-form-container {
+    flex-direction: row;
+  }
+}
+
+.applicant-information {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+@media (min-width: 1300px) {
+  .applicant-information {
+    width: 50%;
+  }
+}
+
+.co-applicant-information {
+  width: 100%;
+}
+@media (min-width: 1300px) {
+  .co-applicant-information {
+    width: 50%;
+  }
+}
+
+.finance-form__heading {
+  font-weight: 300;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 3.4rem;
+}
+@media (min-width: 1300px) {
+  .finance-form__heading {
+    font-size: 2.2rem;
+  }
+}
+
+.finance-form__input {
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  margin: 0 auto 1.2rem auto;
+  border: 1px solid #3f3f3f;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1rem;
+  outline: none;
+  width: 100%;
+  max-width: 100%;
+  font-size: 1.8rem;
+  box-shadow: 0 1px #3f3f3f;
+}
+@media (min-width: 1300px) {
+  .finance-form__input {
+    width: 300px;
+    font-size: 2rem;
+  }
+}
+
+.finance-form__input::-webkit-input-placeholder {
+  /* Edge */
+  color: #999898;
+}
+
+.finance-form__input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #999898;
+}
+
+.finance-form__input::placeholder {
+  color: #999898;
+}
+
+.show-co-applicant {
+  font-weight: 300;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 3.4rem;
+  background: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+@media (min-width: 1300px) {
+  .show-co-applicant {
+    font-size: 2.2rem;
+  }
+}
+
+.show-co-applicant img {
+  margin-right: 1rem;
+}

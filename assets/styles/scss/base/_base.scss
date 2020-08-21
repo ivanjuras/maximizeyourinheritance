@@ -1,0 +1,33 @@
+/********** Base **********/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+  background: url("../media/background-picture-mobile.png") center no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+@media (min-width: 1300px) {
+  body {
+    background: url("../media/background-picture.png") center no-repeat;
+    background-size: cover;
+    background-position: 0;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}

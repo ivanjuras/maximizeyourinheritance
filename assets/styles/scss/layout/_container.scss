@@ -1,0 +1,15 @@
+/********** Container **********/
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 1300px) {
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+  }
+}

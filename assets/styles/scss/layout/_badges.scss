@@ -1,0 +1,26 @@
+/********** Badges **********/
+
+.badges {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1300px) {
+  .badges {
+    padding: 50px 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+}
+
+.badges__badge {
+  margin-bottom: 1.625rem;
+}
+@media (min-width: 1300px) {
+  .badges__badge {
+    margin-bottom: 0;
+  }
+}

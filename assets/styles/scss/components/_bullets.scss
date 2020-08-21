@@ -1,0 +1,35 @@
+/********** Bullets **********/
+
+.main-bullets {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    padding-left: 2.6rem;
+    margin-bottom: 1rem;
+
+    &::before {
+      content: url("/assets/media/full-checkbox.png");
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main-bullets {
+    margin-bottom: 2rem;
+
+    &__item {
+      font-size: 3.6rem;
+      padding-left: 4.5rem;
+      margin-left: 7rem;
+      line-height: 1;
+    }
+  }
+}

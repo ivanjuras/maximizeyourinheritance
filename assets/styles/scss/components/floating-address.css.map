@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,4CAA4C;AAE5C,AAAA,iBAAiB,CAAC;EAChB,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,MAAM;EACvB,KAAK,EAAE,OAAO;CACf",
+    "sources": [
+        "floating-address.scss"
+    ],
+    "names": [],
+    "file": "floating-address.css"
+}

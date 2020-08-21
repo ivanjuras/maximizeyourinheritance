@@ -1,0 +1,59 @@
+/********** Header **********/
+
+.main-header {
+  display: flex;
+  z-index: 5;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  position: relative;
+  background-image: linear-gradient($color-primary, $color-secondary);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+@media (min-width: 1300px) {
+  .main-header {
+    padding: 1rem 0;
+    background-size: cover;
+    box-shadow: 0;
+  }
+}
+
+.header-left {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.header-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1300px) {
+  .header-center {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1300px) {
+  .header-right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+}
+
+.logo {
+  width: 150px;
+  max-width: 100%;
+  margin-bottom: -30px;
+}
+@media (min-width: 1300px) {
+  .logo {
+    width: 211px;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+}

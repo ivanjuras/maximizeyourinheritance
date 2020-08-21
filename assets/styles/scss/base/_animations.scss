@@ -1,0 +1,26 @@
+/********** Animations **********/
+
+/***** Form Transitions *****/
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-confirmation-enter-active {
+  transition: opacity 2s;
+}
+
+.fade-confirmation-leave-active {
+  transition: opacity 0.4s;
+}
+
+.fade-confirmation-enter,
+.fade-confirmation-leave-to {
+  opacity: 0;
+}

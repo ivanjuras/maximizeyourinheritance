@@ -1,0 +1,12 @@
+/********** CTA Section **********/
+
+.cta-section {
+  max-width: 100%;
+  width: 100%;
+  color: white;
+}
+@media (min-width: 1024px) {
+  .cta-section {
+    max-width: 1166px;
+  }
+}

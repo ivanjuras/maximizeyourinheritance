@@ -1,0 +1,60 @@
+// *************** Reviews Page ************** //
+
+.review-form-container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1300px) {
+  .review-form-container {
+    max-width: 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.review-form__input {
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  margin: 0 0 1.2rem 0;
+  border: 1px solid #3f3f3f;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1rem;
+  outline: none;
+  width: 100%;
+  max-width: 100%;
+  font-size: 1.8rem;
+  box-shadow: 0 1px #3f3f3f;
+}
+
+.review-form__input--half {
+  width: 100%;
+}
+@media (min-width: 1300px) {
+  .review-form__input--half {
+    width: 49%;
+  }
+}
+
+.review-form__input--full {
+  width: 100%;
+}
+
+.review-text {
+  height: 270px;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.review-form__stars {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.review-form__stars span {
+  margin-right: 1rem;
+}

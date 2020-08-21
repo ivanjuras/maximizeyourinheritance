@@ -1,0 +1,54 @@
+/********** Button **********/
+
+// // Form button
+.form-step__button span {
+  position: relative;
+  text-transform: uppercase;
+}
+// @media (min-width: 1300px) {
+//   .form-step__button {
+//     padding-left: 2rem;
+//     padding-right: 2rem;
+//     font-size: 3.4rem;
+//     max-width: 30rem;
+//     width: 30rem;
+//     height: 5rem;
+//     line-height: 0;
+//   }
+// }
+
+// Brochure
+.download-brochure {
+  position: relative;
+  background: $color-secondary;
+  text-align: center;
+  color: $color-white;
+  width: 285px;
+  color: $color-white;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  padding: 0.8rem 3rem;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+  transition: background 0.4s;
+  outline: none;
+  max-width: 295px;
+  text-decoration: none;
+  align-self: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+}
+@media (min-width: 1300px) {
+  .download-brochure {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 2.6rem;
+    max-width: 31rem;
+    width: 31rem;
+    margin-top: 0;
+  }
+}

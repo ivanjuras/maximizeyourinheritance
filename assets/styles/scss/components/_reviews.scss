@@ -1,0 +1,60 @@
+/********** Reviews **********/
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+@media(min-width: 1300px) {
+  .reviews {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+// Box
+.reviews__box {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+@media(min-width: 1300px) {
+  .reviews__box {
+    width: 30.5%;
+    margin-bottom: 4rem;
+  }
+}
+
+// Star
+.reviews__star {
+  color: $color-secondary;
+  font-size: 2.2rem;
+  margin-bottom: 1.4rem;
+}
+
+// Content
+.reviews__content {
+  font-size: 1.8rem;
+  color: $color-primary;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+// Meta
+.reviews__meta {
+  display: flex;
+  flex-direction: column;
+}
+
+// Name
+.reviews__name {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.reviews__location {
+  font-weight: 300;
+  font-size: 1.6rem;
+}

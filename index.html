@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Maximize Your Inheritance</title>
+    <meta name="description" content="Maximize Your Inheritance" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <script
+      src="https://kit.fontawesome.com/eb60ad71b4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="main-header">
+      <div class="container u-align-items-center">
+        <div class="header-left">
+          <img
+            class="logo"
+            src="./assets/media/logo.png"
+            alt="Walk-In Tub World logo"
+          />
+        </div>
+
+        <div class="header-right">
+          <a href="tel:+1-866-618-9979" class="phone-header">866-618-9979</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main hero section -->
+    <section class="main-section">
+      <!-- Main container -->
+      <div class="container">
+        <div class="cta-section">
+          <div class="main-content__headline-section">
+            <h1 class="main-headline">
+              Maximize Your Inheritance by Requesting Your Free Situation
+              Analysis,<br class="u-desktop-only" />
+              Plus Gain Instant Access to:
+            </h1>
+            <h1 class="main-sub-headline">
+              1-DAY WILL PREPARATION + FREE PROBATE BROCHURE + $500 OFF ATTORNEY
+              FEES
+            </h1>
+          </div>
+
+          <!-- Form here -->
+          <form class="form" id="main-form">
+            <transition name="fade" mode="out-in">
+              <!-- Form Step 0 (Who is ill or deceased)? -->
+              <div
+                key="0"
+                v-if="formStep === 0"
+                class="form__section form-step--0"
+              >
+                <p class="form__question">
+                  {{ formStepData[0].question }}
+                </p>
+
+                <div class="form__field">
+                  <div class="input-radios input-radios--1">
+                    <div class="input-radio__block">
+                      <input
+                        @change="onSelectRadio"
+                        value="Mother"
+                        name="deceased"
+                        type="radio"
+                        class="input-radio__item"
+                        id="mother"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="mother"
+                        >Mother</label
+                      >
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        @change="onSelectRadio"
+                        value="Father"
+                        name="deceased"
+                        type="radio"
+                        class="input-radio__item"
+                        id="father"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="father"
+                        >Father</label
+                      >
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        @change="onSelectRadio"
+                        value="Spouse"
+                        name="deceased"
+                        type="radio"
+                        class="input-radio__item"
+                        id="spouse"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="spouse"
+                        >Spouse</label
+                      >
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        @change="onSelectRadio"
+                        value="Sibling"
+                        name="deceased"
+                        type="radio"
+                        class="input-radio__item"
+                        id="sibling"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="sibling"
+                        >Sibling</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Step 1 -->
+              <div
+                key="1"
+                v-if="formStep === 1"
+                class="form__section form-step--1"
+              >
+                <p class="form__question">
+                  {{ formStepData[1].question }}
+                </p>
+
+                <div class="form__field">
+                  <div class="input-radios input-radios--1">
+                    <div class="input-radio__block">
+                      <input
+                        @change="onSelectRadio"
+                        value="Yes"
+                        name="will"
+                        type="radio"
+                        class="input-radio__item"
+                        id="yeswill"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="yeswill"
+                        >Yes</label
+                      >
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        @change="onSelectRadio"
+                        value="No"
+                        name="will"
+                        type="radio"
+                        class="input-radio__item"
+                        id="nowill"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="nowill"
+                        >No</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Step 2 -->
+              <div
+                key="2"
+                v-if="formStep === 2"
+                class="form__section form-step--2"
+              >
+                <p class="form__question">
+                  {{ formStepData[2].question }}
+                </p>
+
+                <div class="form__field">
+                  <div class="input-radios input-radios--1">
+                    <div class="input-radio__block">
+                      <input
+                        @change="onSelectRadio"
+                        value="Yes"
+                        name="willposssessioncopy"
+                        type="radio"
+                        class="input-radio__item"
+                        id="yeswillposssessioncopy"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="yeswillposssessioncopy"
+                        >Yes</label
+                      >
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        @change="onSelectRadio"
+                        value="No"
+                        name="willposssessioncopy"
+                        type="radio"
+                        class="input-radio__item"
+                        id="nowillposssessioncopy"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="nowillposssessioncopy"
+                        >No</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Step 3 -->
+              <div
+                key="3"
+                v-if="formStep === 3"
+                class="form__section form-step--3"
+              >
+                <p class="form__question">
+                  {{ formStepData[3].question }}
+                </p>
+
+                <div class="form__field">
+                  <div class="input-radios input-radios--2">
+                    <div class="input-radio__block">
+                      <input
+                        @change="resetError"
+                        value="Property"
+                        v-model="formStepData[3].value"
+                        type="checkbox"
+                        class="input-radio__item"
+                        id="property"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="property"
+                        >Property</label
+                      >
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        @change="resetError"
+                        value="Life Insurance Policies"
+                        v-model="formStepData[3].value"
+                        type="checkbox"
+                        class="input-radio__item"
+                        id="life-insurance-policies"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="life-insurance-policies"
+                        >Life Insurance Policies</label
+                      >
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        @change="resetError"
+                        value="Pensions/Retirement"
+                        v-model="formStepData[3].value"
+                        type="checkbox"
+                        class="input-radio__item"
+                        id="pensions-retirement"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="pensions-retirement"
+                        >Pensions/Retirement</label
+                      >
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        @change="resetError"
+                        value="Bank Accounts"
+                        v-model="formStepData[3].value"
+                        type="checkbox"
+                        class="input-radio__item"
+                        id="bank-accounts"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="bank-accounts"
+                        >Bank Accounts</label
+                      >
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        @change="resetError"
+                        value="Safety Deposit Box"
+                        v-model="formStepData[3].value"
+                        type="checkbox"
+                        class="input-radio__item"
+                        id="safety-deposit-box"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="safety-deposit-box"
+                        >Safety Deposit Box</label
+                      >
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        @change="resetError"
+                        value="Other"
+                        v-model="formStepData[3].value"
+                        type="checkbox"
+                        class="input-radio__item"
+                        id="assets-other"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="assets-other"
+                        >Other</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Step 4 -->
+              <div
+                key="4"
+                v-if="formStep === 4"
+                class="form__section form-step--4"
+              >
+                <p class="form__question">
+                  {{ formStepData[4].question }}
+                </p>
+
+                <div class="form__field">
+                  <div class="input-radios input-radios--1">
+                    <div class="input-radio__block">
+                      <input
+                        @change="onSelectRadio"
+                        value="Less than $50k"
+                        name="assets-amount"
+                        type="radio"
+                        class="input-radio__item"
+                        id="less-than-50k"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="less-than-50k"
+                        >Less than $50k
+                      </label>
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        @change="onSelectRadio"
+                        value="$50k - $250k"
+                        name="assets-amount"
+                        type="radio"
+                        class="input-radio__item"
+                        id="50k-250k"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="50k-250k"
+                        >$50k - $250k
+                      </label>
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        @change="onSelectRadio"
+                        value="$250k - $500k"
+                        name="assets-amount"
+                        type="radio"
+                        class="input-radio__item"
+                        id="250k-500k"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="250k-500k"
+                        >$250k - $500k
+                      </label>
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        @change="onSelectRadio"
+                        value="$500k or more"
+                        name="assets-amount"
+                        type="radio"
+                        class="input-radio__item"
+                        id="500k-or-more"
+                      />
+                      <label
+                        :class="{ error: showError }"
+                        class="input-radio__label"
+                        for="500k-or-more"
+                        >$500k or more
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Step 5 -->
+              <div
+                key="5"
+                v-if="formStep === 5"
+                class="form__section form-step--5"
+              >
+                <p class="form__question">
+                  {{ formStepData[5].question }}
+                </p>
+
+                <div class="form__field">
+                  <div class="input-radios input-radios--2">
+                    <div class="input-radio__block">
+                      <input
+                        v-model="formStepData[5].firstName"
+                        @keyup="resetError"
+                        :class="{ error: showError }"
+                        class="form__input-text first-name"
+                        type="text"
+                        placeholder="First Name"
+                      />
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        v-model="formStepData[5].lastName"
+                        @keyup="resetError"
+                        :class="{ error: showError }"
+                        class="form__input-text last-name"
+                        type="text"
+                        placeholder="Last Name"
+                      />
+                    </div>
+
+                    <div class="input-radio__block">
+                      <input
+                        v-model="formStepData[5].zipCode"
+                        @keyup="resetError"
+                        class="form__input-text zip-code"
+                        :class="{ error: showError }"
+                        type="text"
+                        pattern="\d*"
+                        v-mask="'#####'"
+                        maxlength="5"
+                        placeholder="Enter Zip Code"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Step 6 -->
+              <div
+                key="6"
+                v-if="formStep === 6"
+                class="form__section form-step--6"
+              >
+                <p class="form__question">
+                  {{ formStepData[6].question }}
+                </p>
+
+                <div class="form__field">
+                  <div class="input-radios input-radios--1">
+                    <div class="input-radio__block">
+                      <span class="form__input-text--phone">
+                        <input
+                          v-model="formStepData[6].phoneNumber"
+                          @keyup="resetError"
+                          :class="{ error: showError }"
+                          v-mask="'(###) ###-####'"
+                          class="form__input-text phone-number"
+                          type="text"
+                          placeholder="Phone"
+                        />
+                      </span>
+                    </div>
+
+                    <div class="input-radio__block">
+                      <span class="form__input-text--email">
+                        <input
+                          v-model="formStepData[6].emailAddress"
+                          @keyup="resetError"
+                          :class="{ error: showError }"
+                          class="form__input-text email-address"
+                          type="text"
+                          placeholder="Email"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Step 7 -->
+              <div key="7" v-if="formStep === 7">
+                <div class="thank-you">
+                  <p>Hi {{ formStepData[5].firstName }},</p>
+                  <p>
+                    Thanks for making your request. We will be in touch shortly
+                    to answer with your questions about wills and settling the
+                    estate of your loved ones. We aim to maximize your
+                    inheritance in the most simple way possible. We look forward
+                    to serving you.
+                  </p>
+                  <a class="download-brochure" href="/download/"
+                    >Free Probate Brochure</a
+                  >
+                </div>
+              </div>
+            </transition>
+            <button
+              v-show="showButton"
+              @click.prevent="increaseFormStep"
+              class="form-step__button"
+              :class="{ 'form-step__button--float': formStep === 0, 'u-button-size-sm': smallerButtonSize}"
+            >
+              <span v-if="formStep < 6">{{ buttonText }}</span>
+              <span class="free-analysis-button" v-else>Get Free Analysis</span>
+            </button>
+
+            <transition name="fade-button">
+              <p v-show="showConfirmation" class="confirmation">
+                By clicking the button above, you authorize Maximize Your
+                Inheritance and recommended specialized attorneys to call you on
+                the landline or mobile phone number provided. You understand
+                they may use automated phone technology to call, text, and email
+                you. You understand that consent is not a condition of purchase.
+              </p>
+            </transition>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="container u-flex-column">
+          <p class="footer__text-line">
+            © maximize-your-inheritance.com |
+            <a class="footer__link" href="./privacy-policy/">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/v-mask/dist/v-mask.min.js"></script>
+    <script src="https://unpkg.com/v-tooltip@2.0.2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="assets/scripts/app.js"></script>
+  </body>
+</html>

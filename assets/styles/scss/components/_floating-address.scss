@@ -1,0 +1,18 @@
+/************ Floating address ************/
+
+.floating-address {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: $color-white;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+}
+@media (min-width: 1300px) {
+  .floating-address {
+    font-size: 2rem;
+  }
+}

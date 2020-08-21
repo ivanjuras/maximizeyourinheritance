@@ -1,0 +1,123 @@
+/********** Utilities **********/
+
+@media (max-width: 1300px) {
+  .u-desktop-only {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1300px) {
+  .u-mobile-only {
+    display: none !important;
+  }
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-align-items-center {
+  align-items: center;
+}
+
+.u-justify-content-center {
+  justify-content: center;
+}
+
+.u-flex-column {
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1300px) {
+  .u-flex-lg-row {
+    flex-direction: row;
+    justify-content: flex-end !important;
+  }
+}
+
+.u-button-size-sm {
+  font-size: 2rem !important;
+  text-transform: uppercase;
+}
+@media (min-width: 1300px) {
+  .u-button-size-sm {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 1299px) {
+  .u-sm-fixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+  }
+}
+
+.u-h-padding-none {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.u-fs-md {
+  font-size: 1.6rem !important;
+}
+
+.u-center-button {
+  display: block;
+  margin: 0 auto 3rem auto;
+}
+
+.u-mb-l {
+  margin-bottom: 2rem !important;
+}
+
+.form-step__button span {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+// Brochure
+.download-brochure {
+  position: relative;
+  background: #e55d01;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 250px;
+  color: $color-white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 0.8rem 3rem;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+  transition: background 0.4s;
+  outline: none;
+  width: 100%;
+  max-width: 100%;
+  text-decoration: none;
+  align-self: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 10rem;
+}
+@media (min-width: 1300px) {
+  .download-brochure {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.6rem;
+    max-width: 31rem;
+    width: 31rem;
+    margin-top: 0;
+  }
+}
+
+.free-analysis-button {
+  font-size: 1.6rem !important;
+  line-height: 1 !important;
+}

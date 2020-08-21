@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : ""
+        j.async = true
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, "script", "dataLayer", "GTM-KF7ZNQ2")
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fast, Online Walk-In Tub Quotes</title>
+    <meta
+      name="description"
+      content="Walk-In Tub World™ offers fast, online quotes and a no-hassle purchasing process. No in-home appointment required. Find out how affordable your project can be today!"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+    <script
+      src="https://kit.fontawesome.com/eb60ad71b4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KF7ZNQ2"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden;"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header class="main-header u-sm-fixed">
+      <div class="container u-align-items-center">
+        <div class="header-left">
+          <img
+            class="logo u-desktop-only"
+            src="../assets/media/logo.svg"
+            alt="Walk-In Tub World logo"
+          />
+          <img
+            class="logo u-mobile-only"
+            src="../assets/media/logo.svg"
+            alt="Walk-In Tub World logo"
+          />
+        </div>
+
+        <div class="header-center u-desktop-only">
+          <h4 class="save-big">Fast, Online Quotes</h4>
+        </div>
+
+        <div class="header-right">
+          <a href="tel:+1-866-618-9979" class="phone-header">866-618-9979</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Text Section -->
+    <div class="text-section">
+      <div class="warranty-registration-form" id="warranty-registration-form">
+        <h2 class="finance-form__heading">Warranty Registration</h2>
+        <input
+          type="text"
+          class="finance-form__input"
+          placeholder="First name"
+          v-model="warrantyFirstName"
+        />
+
+        <input
+          type="text"
+          class="finance-form__input"
+          placeholder="Last Name"
+          v-model="warrantyLastName"
+        />
+
+        <input
+          type="text"
+          class="finance-form__input"
+          placeholder="Email"
+          v-model="warrantyEmail"
+        />
+
+        <input
+          type="text"
+          class="finance-form__input"
+          placeholder="Phone"
+          v-mask="'(###) ###-####'"
+          v-model="warrantyPhone"
+        />
+
+        <input
+          type="text"
+          class="finance-form__input"
+          placeholder="Date of installation"
+          v-model="warrantyInstallationDate"
+          v-mask="'##/##/####'"
+        />
+
+        <input
+          type="text"
+          class="finance-form__input"
+          style="margin-bottom: 50px;"
+          placeholder="Serial #"
+          v-model="warrantySerialNumber"
+        />
+        <button
+          @click="sendWarrantyInfo"
+          class="form-step__button u-center-button"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <!-- Badges -->
+    <section class="badges">
+      <img
+        class="badges__badge"
+        src="../assets/media/step-1-badge.png"
+        alt="Answer a few questions"
+      />
+      <img
+        class="badges__badge"
+        src="../assets/media/step-2-badge.png"
+        alt="Post a few photos"
+      />
+      <img
+        class="badges__badge"
+        src="../assets/media/step-3-badge.png"
+        alt="Get a Fast, Free quote"
+      />
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="container u-flex-column">
+        <p class="footer__address">
+          476 US Highway 311 Ext, Randleman, NC 27317
+        </p>
+
+        <p class="footer__text-line">
+          © 2020 Walk-In Tub World&#8482; | All Rights Reserved |
+          <a class="footer__link" href="../privacy-policy/">Privacy Policy</a>
+          <img
+            src="../assets/media/full-checkbox.png"
+            alt="Full checkbox"
+            style="display: none;"
+          />
+        </p>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/v-mask/dist/v-mask.min.js"></script>
+    <script src="../assets/scripts/app3.js"></script>
+  </body>
+</html>
