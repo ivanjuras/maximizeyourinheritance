@@ -9,7 +9,8 @@ body {
   height: 100%;
   padding: 0;
   box-sizing: border-box;
-  background: url("../media/background-picture-mobile.png") center no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../media/background-picture-mobile.png") center no-repeat;
   background-size: cover;
   background-position: 50%;
 }

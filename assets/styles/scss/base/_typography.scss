@@ -24,9 +24,10 @@ body {
   color: $color-white;
   text-decoration: none;
   transition: color 0.3s;
-  padding-right: 2rem;
   display: inline-block;
   letter-spacing: 0.2rem;
+  display: block;
+  margin-bottom: -3rem;
 }
 @media (min-width: 1300px) {
   .phone-header {
