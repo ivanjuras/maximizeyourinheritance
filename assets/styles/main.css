@@ -107,7 +107,7 @@ body {
 
 .main-headline {
   font-family: "Open Sans Condensed", sans-serif;
-  font-size: 5vw;
+  font-size: 6.5vw;
   text-align: center;
   color: #ffffff;
   font-weight: 300;
@@ -115,7 +115,7 @@ body {
   text-shadow: 1px 1px 1px #555;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1000px) {
   .main-headline {
     font-size: 4rem;
     margin-top: 5rem;
@@ -128,13 +128,14 @@ body {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 700;
   text-align: center;
-  font-size: 4vw;
-  margin-bottom: 5rem;
+  font-size: 5.5vw;
+  margin-bottom: 1.5rem;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1000px) {
   .main-sub-headline {
     font-size: 3.6rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -967,8 +968,15 @@ video:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 46vh;
-  height: 46vh;
+  min-height: 30vh;
+  height: 30vh;
+}
+
+@media (min-width: 768px) {
+  .form__section {
+    min-height: 46vh;
+    height: 46vh;
+  }
 }
 
 @media (min-width: 1300px) {

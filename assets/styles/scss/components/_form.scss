@@ -16,8 +16,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 46vh;
-  height: 46vh;
+  min-height: 30vh;
+  height: 30vh;
+}
+@media (min-width: 768px) {
+  .form__section {
+    min-height: 46vh;
+    height: 46vh;
+  }
 }
 @media (min-width: 1300px) {
   .form__section {
